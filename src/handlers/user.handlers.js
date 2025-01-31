@@ -18,7 +18,7 @@ export const signUp = async (req, res) => {
             from: '"Umar Farooq 👻"',
             to: `${email}, ${process.env.EMAIL}`,
             subject: `Registration`,
-            text: `Hello ${fullname} You Have Successfully Registered To Our ECommerce Stor`,
+            text: `Hello ${fullname} You Have Successfully Registered To Our E-Commerce Store`,
             html: `<br>Welcome ${fullname} <br/>We're thrilled to have you here. Explore, connect, and enjoy a seamless experience tailored just for you. If you need assistance, our team is here to help. Let's make great things happen together!</b> `,
         });
 
