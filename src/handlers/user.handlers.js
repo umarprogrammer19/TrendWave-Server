@@ -13,16 +13,6 @@ const generateRefreshToken = (user) => {
     });
 };
 
-import nodemailer from "nodemailer";
-
-export const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.SMTP_SECRET
-    }
-});
 
 // Sign Up Api 
 export const signUp = async (req, res) => {
