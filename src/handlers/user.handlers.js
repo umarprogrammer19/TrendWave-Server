@@ -1,4 +1,4 @@
-import usersModels from "../models/users.models.js";
+import usersModels from "../models/user.models.js";
 import bcrypt from "bcrypt";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwtToken.js";
 import { transporter } from "../utils/transporter.js";
