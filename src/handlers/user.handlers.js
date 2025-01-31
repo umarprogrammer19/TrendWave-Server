@@ -1,5 +1,7 @@
 import usersModels from "../models/users.models.js";
 import bcrypt from "bcrypt";
+import { generateAccessToken, generateRefreshToken } from "../utils/jwtToken.js";
+import { transporter } from "../utils/transporter.js";
 
 // Sign Up Api 
 export const signUp = async (req, res) => {
@@ -45,7 +47,7 @@ export const signIn = async (req, res) => {
 
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
-            secure: true,
+            secure: process.env.NODE_ENV === "production",
             sameSite: "strict",
             path: '/'
         });
